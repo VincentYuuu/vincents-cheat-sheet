@@ -4,11 +4,22 @@
     "@commitlint/config-conventional": "^15.0.0",
     "@commitlint/cz-commitlint": "^15.0.0",
     "commitizen": "^4.2.4",
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.2"
   },
   "scripts": {
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "lint-staged && git-cz --no-verify"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{rb,rake}": [
+      "bundle exec rubocop -a"
+    ]
   },
   "config": {
     "commitizen": {
