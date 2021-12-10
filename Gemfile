@@ -12,6 +12,7 @@ gem 'redis', '~> 4.0'
 # gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'rack-cors'
+gem 'figaro', '~> 1.2'
 
 group :development, :test do
   gem 'pry'
