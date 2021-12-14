@@ -7,6 +7,7 @@ ruby '3.0.3'
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'puma', '~> 5.0'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6', require: 'dotenv/rails-now'
 gem 'pg', '~> 1.2', '>= 1.2.3'
 gem 'redis', '~> 4.0'
 gem 'hiredis', '~> 0.6.3'
@@ -14,7 +15,6 @@ gem 'hiredis', '~> 0.6.3'
 # gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'rack-cors'
-gem 'figaro', '~> 1.2'
 gem 'sidekiq', '~> 6.3', '>= 6.3.1'
 
 group :development, :test do
