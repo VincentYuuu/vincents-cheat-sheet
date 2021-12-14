@@ -36,5 +36,5 @@
 
 yarn.lock
 
-# Ignore application configuration
-/config/application.yml
+# Ignore .env file
+.env
