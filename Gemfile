@@ -18,9 +18,9 @@ gem 'figaro', '~> 1.2'
 gem 'sidekiq', '~> 6.3', '>= 6.3.1'
 
 group :development, :test do
-  gem 'pry'
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'pry-nav'
   gem 'rubocop', '~> 1.23', require: false
   gem 'rubocop-performance', '~> 1.12'
   gem 'rubocop-rails', '~> 2.12', '>= 2.12.4'
