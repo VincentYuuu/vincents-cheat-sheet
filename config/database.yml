@@ -1,24 +1,20 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+  port: <%= ENV['POSTGRES_PORT'] %>
 
 development:
   <<: *default
-  database: vincents_cheat_sheet_development
-  host: localhost
-  port: 5432
+  database: <%= ENV['POSTGRES_DB_DEVELOPMENT'] %>
 
 test:
   <<: *default
-  database: vincents_cheat_sheet_test
-  host: localhost
-  port: 5432
+  database: <%= ENV['POSTGRES_DB_TEST'] %>
 
 production:
   <<: *default
-  database: vincents_cheat_sheet_production
-  username: <%= ENV['POSTGRES_USER_PRODUCTION'] %>
-  password: <%= ENV['POSTGRES_PASSWORD_PRODUCTION'] %>
+  database: <%= ENV['POSTGRES_DB_PRODUCTION'] %>

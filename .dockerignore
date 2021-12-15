@@ -1,0 +1,12 @@
+.bin
+.dockerignore
+.git
+.gitignore
+.byebug_history
+.rspec
+.rubocop_todo.yml
+tmp
+log
+public/packs
+node_modules
+yarn-error.log
